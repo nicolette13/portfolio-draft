@@ -56,10 +56,10 @@ ul, li, a{
 
 html{
     scroll-behavior: smooth;
-    --background: #fcf3ea; 
-    --accentone: #ddd4cc;
-    --accenttwo: #afa193;
-    --accentthree: #9b8269;
+    --background: #e8e1d8; 
+    --accentone: #edd1d1;
+    --accenttwo: #e8baba;
+    --accentthree: #786a6a;
     --accentfour: #5f5449;
     --fontsize: 16px; 
     --fontcolor: #1a1a1a;
@@ -126,47 +126,13 @@ ul li:hover, ul li a:hover{
     color: var(--accentfour); 
 }
 
-/* 
-.page-nav{
-    background-color: var(--accentone);
-    font-size: 1.1rem;
+.animate-arrow, .photoshop-arrow{
+    transition: transform 0.3s ease-in-out; 
 }
 
-.page-nav::after{
-    content: "";
-    clear: both;
-    display: block;
+li#animate:hover .animate-arrow, li#photoshop:hover .photoshop-arrow{
+    transform: rotate(180deg);
 }
-
-.page-nav > ul > li{
-    display: block;
-    position: relative;
-    padding: 0.3rem 0.5rem;
-    float: left;
-}
-
-.page-nav ul li a{
-    color: var(--fontcolor);
-}
-
-.page-nav > ul > li:hover{
-    background-color: var(--accenttwo);
-    border-radius: 5%; 
-}
-
-li#animate #animate_menu li, li#photoshop #photoshop_menu li{
-    position: absolute;
-    float: none; 
-    background-color: var(--accentone);
-    opacity: 0; 
-    transition: all 0.3s ease-in-out;
-}
-
-
-li#photoshop:hover ul#photoshop_menu li, li#animate:hover ul#animate_menu li{
-    opacity: 1; 
-}
-    */ 
 
 /* HEADINGS */
 

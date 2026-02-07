@@ -16,33 +16,168 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
+
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* remove link & list default styles */
+
+ul, li, a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+
+html{
+    scroll-behavior: smooth;
+    --background: #feeddc; 
+    --accentone: #ffc7cb;
+    --accenttwo: #d49da9;
+    --accentthree: #a05a74;
+    --accentfive: #441427;
+    --fontsize: 16px; 
+    --fontcolor: #1a1a1a;
+    --fontfamily: 'Raleway', 'Roboto', 'Quicksand', sans-serif;
+}
+
+body {
+	line-height: 1.2;
+    background-color: var(--background);
+    font-size: var(--fontsize);
+    color: var(--fontcolor);
+    font-family: var(--fontfamily);
+
+}
+
+strong{
+    font-weight: bold; 
+}
+
+/* NAVIGATION MENU */
+
+.page-nav{
+    background-color: var(--accentone);
+    font-size: 1.1rem;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: justify;
+}
+
+.page-nav::after{
+    content: "";
+    clear: both;
+    display: block; 
+}
+
+.page-nav > ul > li{
+    display: block;
+    position: relative; 
+    padding: 0.3rem;
+    float: left; 
+}
+
+ul li a{
+    color: var(--fontcolor); 
+    float: none; 
+}
+
+li#photoshop ul#photoshop_menu li, li#animate ul#animate_menu li{
+    display: none; 
+    transition: all 0.3s ease-in-out;
+}
+
+li#photoshop:hover ul#photoshop_menu li, li#animate:hover ul#animate_menu li{
+    display: block;
+}
+
+ul li:hover, ul li a:hover{
+    background-color: var(--accenttwo);
+    border-radius: 5%; 
+}
+
+.page-nav > ul >li:hover, .page-nav > ul >li > a:hover,  ul#animate_menu a:hover, ul#photoshop_menu a:hover{
+    color: var(--accentfive); 
+}
+
+/* 
+.page-nav{
+    background-color: var(--accentone);
+    font-size: 1.1rem;
+}
+
+.page-nav::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.page-nav > ul > li{
+    display: block;
+    position: relative;
+    padding: 0.3rem 0.5rem;
+    float: left;
+}
+
+.page-nav ul li a{
+    color: var(--fontcolor);
+}
+
+.page-nav > ul > li:hover{
+    background-color: var(--accenttwo);
+    border-radius: 5%; 
+}
+
+li#animate #animate_menu li, li#photoshop #photoshop_menu li{
+    position: absolute;
+    float: none; 
+    background-color: var(--accentone);
+    opacity: 0; 
+    transition: all 0.3s ease-in-out;
+}
+
+
+li#photoshop:hover ul#photoshop_menu li, li#animate:hover ul#animate_menu li{
+    opacity: 1; 
+}
+    */ 
+
+/* HEADINGS */
+
+h1 {
+    font-weight: bolder; 
+    font-size: 2rem; 
+    margin: 1rem;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
 }

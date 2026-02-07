@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sitewide.css">
+    <link rel="stylesheet" href="color-and-type.css">
+    <!-- phosphor icons -->
+       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
     <title>Color Theory</title>
 </head>
 <body>
     <h1>Color Theory</h1>
     <nav>
         <ul>
-            <li><a href="/portfolio/index.html">Home</a></li>
+            <li><a href="/portfolio-draft/index.html">Home</a></li>
+            <li><a href="/portfolio-draft/resume.html"></a></li>
             <li>Adobe Animate Showcase:</li>
                 <ul>
-                    <li><a href="/portfolio/animation/advertisement.html">Animated Advertisement</a></li>
-                    <li><a href="/portfolio/animation/character-animation.html">Character Animation</a></li>
-                    <li><a href="/portfolio/animation/infographic.html">Interactive Infographic</a></li>
+                    <li><a href="/portfolio-draft/animation/advertisement.html">Animated Advertisement</a></li>
+                    <li><a href="/portfolio-draft/animation/character-animation.html">Character Animation</a></li>
+                    <li><a href="/portfolio-draft/animation/infographic.html">Interactive Infographic</a></li>
                 </ul>
             <li>Adobe Photoshop Showcase:</li>
                 <ul>
-                    <li><a href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
-                    <li><a href="/portfolio/photoshop/branding-package.html">Example Branding Pacakage</a></li>
-                    <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
+                    <li><a href="/portfolio-draft/photoshop/magazine.html">Digital Magazine Cover</a></li>
+                    <li><a href="/portfolio-draft/photoshop/branding-package.html">Example Branding Pacakage</a></li>
+                    <li><a href="/portfolio-draft/photoshop/restoration.html">Photo Restoration</a></li>
                 </ul>
             <li><strong>Color Theory</strong></li>
         </ul>
@@ -35,17 +41,17 @@
         </ul>
     </nav>
 
-    <p><strong>Color Theory</strong> refers to the study of how colors work together to influence perceptions and evoke emotions.</p>
+    <p class="overview"><strong>Color Theory</strong> refers to the study of how colors work together to influence perceptions and evoke emotions.</p>
 
     <h2 id="definitions">Definitions</h2>
     <ol>
-        <li><strong>Primary colors</strong> &dash; pure; cannot be created by mixing other colors. The three primary colors are red, blue, and yellow.</li>
-        <li><strong>Secondary colors</strong> &dash; formed by mixing two primary colors. The three secondary colors are green, violet, and orange.</li>
-        <li><strong>Tertiary colors</strong> &dash; formed by mixing a primary color with a secondary color. Some examples of tertiary colors include blue-violet, yellow-green, and red-orange.</li>
-        <li><strong>Triadic colors</strong> &dash; colors that are spaced out in even increments on the color wheel, such as red, yellow, and blue.</li>
-        <li><strong>Complementary colors</strong> &dash; colors that are opposites on the color wheel, such as blue and orange.</li>
-        <li><strong>Split colors</strong> &dash; a base color and two colors that would be balanced on the opposite side of the color wheel. An example would be a base color of red &mdash; the split&dash;complements would be blue-green and yellow-green.<sup style="font-size: 70%;">1</sup></li>
-        <li><strong>Analogous colors</strong> &dash; colors that share a space on the color wheel, such as orange, red-orange, and red.</li>
+        <li><strong>Primary colors</strong> &dash; pure; cannot be created by mixing other colors. The three primary colors are <span class="red">red</span>, <span class="blue">blue</span>, and <span class="yellow">yellow</span>.</li>
+        <li><strong>Secondary colors</strong> &dash; formed by mixing two primary colors. The three secondary colors are <span class="green">green</span>, <span class="violet">violet</span>, and<span class="orange">orange</span>.</li>
+        <li><strong>Tertiary colors</strong> &dash; formed by mixing a primary color with a secondary color. Some examples of tertiary colors include <span class="blue-violet">blue&dash;violet</span>, <span class="yellow-green">yellow&dash;green</span>, and <span class="red-orange">red&dash;orange</span>.</li>
+        <li><strong>Triadic colors</strong> &dash; colors that are spaced out in even increments on the color wheel, such as <span class="red">red</span> <span class="yellow"></span>, and <span class="blue">blue</span>.</li>
+        <li><strong>Complementary colors</strong> &dash; colors that are opposites on the color wheel, such as <span class="blue">blue</span> and <span class="orange">orange</span>.</li>
+        <li><strong>Split colors</strong> &dash; a base color and two colors that would be balanced on the opposite side of the color wheel. An example would be a base color of <span class="red">red</span> &mdash; the split&dash;complements would be <span class="blue-green">blue&dash;green</span> and <span class="yellow-green">yellow&dash;green</span>.<sup>1</sup></li>
+        <li><strong>Analogous colors</strong> &dash; colors that share a space on the color wheel, such as <span class="orange">orange</span>, <span class="red-orange">red&dash;orange</span>, and <span class="red">red</span>.</li>
         <li><strong>Saturation</strong> &dash; the degree of purity, brightness, and vividness within a color.</li>
         <li><strong>Hue</strong> &dash; the purest form of a color.</li>
         <li><strong>Tint</strong> &dash; created when white is mixed into a color.</li>
@@ -55,15 +61,17 @@
         <li><strong>Vibrancy</strong> &dash; refers to the intensity of a color. A high-vibrancy color is saturated and bold, while a low-vibrancy color is more muted.</li>
         <li><strong>Monochormatic</strong> &dash; colors very blended with minimal hue variety.</li>
         <li><strong>Color scheme</strong> &dash; combination of all colors used within a project, arranged in a manner that enhances the overall design.</li>
-        <li><strong>Neutral colors</strong> &dash; often perceived as the absence of color, they actually typically contain subtle undertones. Some examples of neutral colors include gray and beige.</li>
-        <li><strong>Warm colors</strong> &dash; bring energy and intensity to a design and can often invoke strong emotions. Some examples of warm colors include red and orange.</li>
-        <li><strong>Cool colors</strong> &dash; contribute to a calm and soothing atmosphere and can invoke feelings of peace and tranquility. Some examples of cool colors include blue and purple.</li>
+        <li><strong>Neutral colors</strong> &dash; often perceived as the absence of color, they actually typically contain subtle undertones. Some examples of neutral colors include <span class="gray">gray</span> and <span class="beige">beige</span>.</li>
+        <li><strong>Warm colors</strong> &dash; bring energy and intensity to a design and can often invoke strong emotions. Some examples of warm colors include <span class="red">red</span> and <span class="orange">orange</span>.</li>
+        <li><strong>Cool colors</strong> &dash; contribute to a calm and soothing atmosphere and can invoke feelings of peace and tranquility. Some examples of cool colors include <span class="blue">blue</span> and <span class="purple">purple</span>.</li>
         <li><strong>Whitespace</strong> &dash; empty space.</li>
     </ol>
-    <p style="font-size: 70%;">Sources: Webucator <br>
+    <p class="sources">Sources: Webucator <br>
         <sup>1</sup> <a href="https://etchrlab.com/blogs/news/split-complementary-color-schemes?srsltid=AfmBOorU_nccrL2OlHbTe-RwRvixSMUTbhNYbqF8BCXGLp6R6cxtsQ9Q">Simplifying Color Choice with Split Complementary Color Schemes</a> &dash; EtchrLab</p>
 
 
+    <a href="#" class="top-link" aria-label="back to top"><i class="ph ph-arrow-circle-up"></i></a>
+</div>
 <h2 id="color-schemes">Example Color Schemes</h2>
 
 <table border="1">
@@ -74,11 +82,11 @@
         </tr>
         <tr>
            <td>Fun at the Fair</td>
-           <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732488621/in/dateposted-ff/" title="fun_atthe_fair"><img src="https://live.staticflickr.com/65535/54732488621_cd14f39a0b_w.jpg" width="240" height="120" alt="fun_atthe_fair"></a></td> 
+           <td class="scheme_colors"><span id="fair_color1">#FF0F80</span><span id="fair_color2">#FE4E00</span><span id="fair_color3">#FFAE03</span><span id="fair_color4">#E67F0D</span><span id="fair_color5">#E9190F</span></td> 
         </tr>
         <tr>
             <td>Radical Reds</td>
-            <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732474786/in/dateposted-ff/" title="radical_reds"><img src="https://live.staticflickr.com/65535/54732474786_937bed6a2f_m.jpg" width="240" height="120" alt="radical_reds"></a></td>
+            <td class="scheme_colors"><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732474786/in/dateposted-ff/" title="radical_reds"><img src="https://live.staticflickr.com/65535/54732474786_937bed6a2f_m.jpg" width="240" height="120" alt="radical_reds"></a></td>
         </tr>
          <tr>
         <td>Blackberry Mint</td>

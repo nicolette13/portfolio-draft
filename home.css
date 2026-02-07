@@ -1,0 +1,19 @@
+.page-title{
+    text-align: center;
+}
+
+.contact{
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    margin: 2rem 1rem;
+}
+
+.bio{
+    margin: 2rem 1rem;
+}
+
+i.ph{
+    font-weight: bolder; 
+    font-size: 1.2rem;
+}

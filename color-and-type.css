@@ -1,0 +1,98 @@
+.overview{
+margin: 1rem .5rem;
+}
+
+/* COLORS */
+.red{
+    background-color: red;
+    padding: .1rem;
+    border-radius: 20%;
+}
+
+.yellow{
+    background-color: yellow;
+    padding: .2rem;
+    border-radius: 20%;
+}
+
+.blue{
+    color: blue;
+}
+
+.green{
+    color: green;
+}
+
+.violet{
+    color: violet;
+}
+
+.orange{
+    color: orange;
+}
+
+.blue-violet{
+    color: blueviolet;
+}
+
+.yellow-green{
+    color: yellowgreen;
+}
+
+.blue-green{
+    color: rgb(0,206,200); 
+}
+
+.red-orange{
+    color: orangered;
+}
+
+.gray{
+    color: gray;
+}
+
+.beige{
+    color: beige;
+}
+
+.purple{
+    color: purple;
+}
+
+.top-link{
+    position: fixed;
+    text-decoration: none;
+    color: whitesmoke;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(57, 57, 57);
+    padding: .5rem;
+    border-radius: 10%;
+}
+
+#definitions{
+    padding: .5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+ol{
+    margin: .5rem;
+    list-style-type: disc;
+    text-align: justify;
+}
+
+sup{
+    font-size: 70%; 
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+}
+
+.sources{
+    margin: .5rem;
+    font-size: 70%;
+}

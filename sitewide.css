@@ -56,11 +56,11 @@ ul, li, a{
 
 html{
     scroll-behavior: smooth;
-    --background: #feeddc; 
-    --accentone: #ffc7cb;
-    --accenttwo: #d49da9;
-    --accentthree: #a05a74;
-    --accentfive: #441427;
+    --background: #fcf3ea; 
+    --accentone: #ddd4cc;
+    --accenttwo: #afa193;
+    --accentthree: #9b8269;
+    --accentfour: #5f5449;
     --fontsize: 16px; 
     --fontcolor: #1a1a1a;
     --fontfamily: 'Raleway', 'Roboto', 'Quicksand', sans-serif;
@@ -123,7 +123,7 @@ ul li:hover, ul li a:hover{
 }
 
 .page-nav > ul >li:hover, .page-nav > ul >li > a:hover,  ul#animate_menu a:hover, ul#photoshop_menu a:hover{
-    color: var(--accentfive); 
+    color: var(--accentfour); 
 }
 
 /* 

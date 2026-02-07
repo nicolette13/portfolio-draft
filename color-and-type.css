@@ -96,3 +96,9 @@ sup{
     margin: .5rem;
     font-size: 70%;
 }
+
+article{
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 1%; 
+}

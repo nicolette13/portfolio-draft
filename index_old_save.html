@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!----- external stylesheets ------>
+<link rel="stylesheet" href="sitewide.css">
+<link rel="stylesheet" href="home.css">
+<!------ google fonts --------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<!---- phosphor icons ------------>
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+ <!--- font awesome icons -------->
+ <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
+ <!-- tippy tooltips -->
+  <script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+   
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1 class="page-title">Nicolette Richmond's Portfolio</h1>
+        <nav class="page-nav"> 
+            <ul>
+                <li><strong>Home</strong></li>
+                <li><a href="/portfolio-draft.resume.html">Résumé</a></li>
+                <li id="animate">Adobe Animate Showcase <i class="fa fa-angle-down animate-arrow"></i>
+                    <ul id="animate_menu">
+                        <li><a href="/portfolio-draft/animate/character-animation.html">Character Animation</a></li>
+                        <li><a href="/portfolio-draft/animate/advertisement.html">Interactive Advertisement</a></li>
+                        <li><a href="/portfolio-draft/animate/infographic.html">Interactive infographic</a></li>
+                    </ul>
+                </li>
+                <li id="photoshop">Adobe Photoshop Showcase <i class="fa fa-angle-down photoshop-arrow"></i>
+                    <ul id="photoshop_menu">
+                        <li><a href="/portfolio-draft/photoshop/magazine.html">Digitial Magazine Cover</a></li>
+                        <li><a href="/portfolio-draft/photoshop/branding-package.html">Example Branding Package</a></li>
+                        <li><a href="/portfolio-draft/photoshop/restoration.html">Photo Restoration</a></li>
+                    </ul>
+                </li>
+                <li><a href="/portfolio-draft/color-theory.html">Color Theory</a></li>
+                <li><a href="/portfolio-draft/typography.html">Typography</a></li>
+            </ul>
+        </nav>
+<button id="theme-toggle" aria-label="toggle light and dark mode" type="button">
+    <i class="ph ph-moon lightoff"></i>
+    <i class="ph ph-sun lighton"></i>
+</button>
+
+
+
+
+<p class="bio">Web Designer focused on crafting clean, intuitive interfaces with a strong emphasis on typography, visual hierarchy, and usability. Explore my portfolio above.</p>
+
+<p class="contact">
+    <i class="ph ph-phone"></i> (000)000-0000 | 
+    <i class="ph ph-at"></i> richmondnicolette13@protonmail.com | <i class="ph ph-map-pin"></i> Miami, FL
+</p>
+<!-- tippy tooltips -->
+<script>
+    tippy('[data-tippy-content', {
+    theme: 'custom',
+    delay: [200], 
+    duration: [500],
+    followCursor: true,
+});
+
+
+</script>
+<!----- external javascript sheet ----->
+<script type="text/javascript" src="sitewide.js"></script>
+</body>
+</html>

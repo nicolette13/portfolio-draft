@@ -9,7 +9,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -54,22 +54,53 @@ ul, li, a{
 
 /* VARIABLES */
 
+:root{
+    --fontfamily: 'rubik', 'roboto', sans-serif; 
+    --fontsize: 16px; 
+}
+
 html{
     scroll-behavior: smooth;
-    --background: #e8e1d8; 
-    --accentone: #edd1d1;
-    --accenttwo: #e8baba;
-    --accentthree: #786a6a;
-    --accentfour: #5f5449;
-    --fontsize: 16px; 
-    --fontcolor: #1a1a1a;
-    --fontfamily: 'Raleway', 'Roboto', 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* LIGHT/DARK MODE VARIABLES  */
+
+:root, html[data-theme="light"]{
+    --lightsoff: flex; 
+    --lightson: none; 
+    --background: #whitesmoke; 
+    --fontcolor: #1a1a1a; 
+}
+
+html[data-theme="dark"]{
+    --lightsoff: none; 
+    --lightson: flex; 
+    --background: #1a1a1a; 
+    --fontcolor: #whitesmoke; 
+}
+
+html.theme-transition, html.theme-transition *, html.theme-transition *::before, html.theme-transition *::after{
+    transition-duration: 0.3s;
+    transition-delay: 0;
+}
+
+
+button{
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+button.active{
+    background-color: #1a1a1a;
+    color: whitesmoke;
 }
 
 body {
 	line-height: 1.2;
     background-color: var(--background);
-    font-size: var(--fontsize);
+    font-size: 14px;
     color: var(--fontcolor);
     font-family: var(--fontfamily);
 
@@ -79,51 +110,59 @@ strong{
     font-weight: bold; 
 }
 
-/* NAVIGATION MENU */
+/* HEADER NAVIGATION */
 
 .page-nav{
-    background-color: var(--accentone);
-    font-size: 1.1rem;
-    padding: 1rem;
-    display: block;
-    width: 100%;
-    text-align: justify;
+    background: aliceblue;
+    margin: 0 -.5rem; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .page-nav::after{
     content: "";
-    clear: both;
     display: block; 
+    clear: both;
 }
 
-.page-nav > ul > li{
-    display: block;
-    position: relative; 
-    padding: 0.3rem;
+.page-nav ul{
+    margin: 0; 
+    padding: 0; 
+}
+
+.page-nav ul li{
     float: left; 
+    padding: .5rem;
+    background-color: aliceblue;
 }
 
-ul li a{
+.page-nav a{
     color: var(--fontcolor); 
-    float: none; 
+    display: block;
+    padding: .5rem;
+    transition: all 0.3s ease-in-out; 
 }
 
-li#photoshop ul#photoshop_menu li, li#animate ul#animate_menu li{
-    display: none; 
+.page-nav li{
     transition: all 0.3s ease-in-out;
 }
 
-li#photoshop:hover ul#photoshop_menu li, li#animate:hover ul#animate_menu li{
-    display: block;
+.page-nav li:hover{
+    background: aqua; 
 }
 
-ul li:hover, ul li a:hover{
-    background-color: var(--accenttwo);
-    border-radius: 5%; 
+li#animate ul, li#photoshop ul{
+    display: none; 
 }
 
-.page-nav > ul >li:hover, .page-nav > ul >li > a:hover,  ul#animate_menu a:hover, ul#photoshop_menu a:hover{
-    color: var(--accentfour); 
+li#animate:hover ul, li#photoshop:hover ul{
+    display: block; 
+    position: absolute; 
+}
+
+li#animate li, li#photoshop li{
+    float: none; 
 }
 
 .animate-arrow, .photoshop-arrow{
@@ -132,6 +171,64 @@ ul li:hover, ul li a:hover{
 
 li#animate:hover .animate-arrow, li#photoshop:hover .photoshop-arrow{
     transform: rotate(180deg);
+}
+
+li#animate, li#photoshop{
+    margin-top: .5rem;
+}
+
+/* theme buttons */
+
+.lightson, .lightsoff{
+    cursor: pointer; 
+}
+
+button#theme-toggle{
+    margin-right: 0.8rem;
+}
+
+i.lightsoff{
+    display: var(--lightsoff); 
+}
+
+i.lightson{
+    display: var(--lightson); 
+}
+
+/* FONT SIZE BUTTONS */
+div.themes{
+    display: flex;
+    margin-right: 1rem;
+    float: right;
+}
+
+#smallfont.active, #mediumfont.active, #largefont.active{
+    background-color: #1a1a1a;
+    color: whitesmoke; 
+}
+
+#mediumfont{
+    font-size: 1.1rem;
+}
+
+#largefont{
+    font-size: 1.3rem;
+}
+
+button#smallfont{
+    height: 100%; 
+}
+
+button#mediumfont{
+    height: 150%; 
+}
+
+button#largefont{
+    height: 200%; 
+}
+
+button#smallfont, button#mediumfont, button#largefont{
+    margin-left: 0.3rem;
 }
 
 /* HEADINGS */

@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!---------- external stylesheets ------------>
+<!------- external stylesheets ---------->
 <link rel="stylesheet" href="sitewide.css">
 <link rel="stylesheet" href="home.css">
-<!----------- google fonts --------------------->
+ <!------ google fonts -------->
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!---------- phosphor icons -------------------->
- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
- <!------ font awesome icons -------------------->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+ <!-------- font awesome icons ---------->
  <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
-   
-    <title>Portfolio</title>
+
+    <title>Nicolette Richmond's Portfolio</title>
+
 </head>
-<body>
-    <h1 class="page-title">Nicolette Richmond's Portfolio</h1>
-        <nav class="page-nav"> 
+<body id="container">
+    <header>
+        <nav class="page-nav">
             <ul>
-                <li><strong>Home</strong></li>
-                <li><a href="/portfolio-draft.resume.html">Résumé</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Résumé</a></li>
                 <li id="animate">Adobe Animate Showcase <i class="fa fa-angle-down animate-arrow"></i>
-                    <ul id="animate_menu">
-                        <li><a href="/portfolio-draft/animate/character-animation.html">Character Animation</a></li>
-                        <li><a href="/portfolio-draft/animate/advertisement.html">Interactive Advertisement</a></li>
-                        <li><a href="/portfolio-draft/animate/infographic.html">Interactive infographic</a></li>
+                    <ul id="animate-menu">
+                        <li><a href="">Character Animation</a></li>
+                        <li><a href="">Interactive Advertisement</a></li>
+                        <li><a href="">Interactive infographic</a></li>
                     </ul>
                 </li>
-                <li id="photoshop">Adobe Photoshop Showcase <i class="fa fa-angle-down photoshop-arrow"></i>
-                    <ul id="photoshop_menu">
-                        <li><a href="/portfolio-draft/photoshop/magazine.html">Digitial Magazine Cover</a></li>
-                        <li><a href="/portfolio-draft/photoshop/branding-package.html">Example Branding Package</a></li>
-                        <li><a href="/portfolio-draft/photoshop/restoration.html">Photo Restoration</a></li>
+                <li id="photoshop">Photoshop Showcase <i class="fa fa-angle-down photoshop-arrow"></i>
+                    <ul id="photoshop-menu">
+                        <li><a href="">Digital Magazine Cover</a></li>
+                        <li><a href="">Example Branding Package</a></li>
+                        <li><a href="">Photo Restoration</a></li>
                     </ul>
                 </li>
-                <li><a href="/portfolio-draft/color-theory.html">Color Theory</a></li>
-                <li><a href="/portfolio-draft/typography.html">Typography</a></li>
+                <li><a href="">Color Theory</a></li>
+                <li><a href="">Typography</a></li>
             </ul>
+        <div class="themes">
+            <button id="theme-toggle" aria-label="toggle light & dark mode">
+                <i class="fa fa-sun lightson" title="switch to light mode"></i>
+                <i class="fa fa-moon lightsoff" title="switch to dark mode"></i>
+            </button>
+            <div class="fontsizebtns">
+                <button type="button" value="small" id="small" class="active">A</button>
+                <button type="button" value="medium" id="medium">A</button>
+                <button type="button" value="large" id="large">A</button>
+            </div>
+        </div>
         </nav>
+            
+    </header>
+    <main>
+        <h1 class="page-title">Nicolette Richmond's Portfolio</h1>
+        <p class="bio">Web Designer focused on crafting clean, intuitive interfaces with a strong emphasis on typography, visual hierarchy, and usability. Explore my portfolio above.</p>
+        <p class="contact">
+            <i class="fa fa-mobile-screen"></i> <span id="phone-number">(561)000-0000</span> | <i class="fa fa-at"></i> <span id="email">richmondnicolette13@protonmail.com</span> | 
+            <i class="fa-solid fa-location-dot"></i> <span class="location">Miami, FL </span>
+        </p>
+    </main>
 
-<p class="bio">Web Designer focused on crafting clean, intuitive interfaces with a strong emphasis on typography, visual hierarchy, and usability. Explore my portfolio above.</p>
-
-<p class="contact">
-    <i class="ph ph-phone"></i> (000)000-0000 | 
-    <i class="ph ph-at"></i> richmondnicolette13@protonmail.com | <i class="ph ph-map-pin"></i> Miami, FL
-</p>
+    <!-- external javascript sheet -->
+     <script src="sitewide.js"></script>
 </body>
 </html>

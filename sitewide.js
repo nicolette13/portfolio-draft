@@ -1,39 +1,54 @@
+// TIPPY TOOLTIPS
+
+tippy('[data-tippy-content', {
+    theme: 'custom', 
+    delay: [200],
+    followCursor: true,
+    duration: [400]
+}); 
+
+
+
+
 // LIGHT/DARK MODE
 
 const themeToggleBtn = document.getElementById('theme-toggle'); 
-const htmlElm = document.documentElement; 
 
-function setTheme(theme){
-    htmlElm.setAttribute('data-theme', theme); 
-    localStorage.setItem('theme', theme); 
-}
+const htmlElem = document.documentElement; 
 
-function toggleTheme(){
-    const currentTheme = htmlElm.getAttribute('data-theme'); 
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light'; 
-    setTheme(newTheme); 
-}
+themeToggleBtn.addEventListener('click', () => {
+    function setTheme(theme){
+        htmlElem.setAttribute('data-theme', theme); 
+        localStorage.setItem('theme', theme); 
+    }
+    function toggleTheme(){
+       const currentTheme = htmlElem.getAttribute('data-theme'); 
+       const newTheme = currentTheme === 'light' ? 'dark' : 'light'; 
+        setTheme(newTheme); 
+    }
 
-themeToggleBtn.addEventListener('click', toggleTheme); 
+    function themeTransition(){
+        htmlElem.classList.add('theme-transition'); 
+    }
+}); 
 
 
-// TOGGLE FONT SIZE  
+// TOGGLE FONT SIZES
 
-let container = document.getElementById('container'); 
+let body = document.getElementById('main'); 
+
 let smallBtn = document.getElementById('small'); 
-let mediumBtn = document.getElementById('medium'); 
+let medBtn = document.getElementById('medium'); 
 let largeBtn = document.getElementById('large'); 
 
 smallBtn.addEventListener('click', function(e){
-    container.style.fontSize = '14px'; 
+    body.style.fontSize = '14px';
 }); 
 
-mediumBtn.onclick = function(e){
-    container.style.fontSize = '18px';  
-}
+medBtn.addEventListener('click', function(e){
+    body.style.fontSize = '18px';
+}); 
 
-largeBtn.onclick = function(e){
-    container.style.fontSize = '22px'; 
-}
-
-
+largeBtn.addEventListener('click', function(e){
+    body.style.fontSize = '22px'; 
+}); 

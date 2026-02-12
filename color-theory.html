@@ -3,64 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- external stylesheets -->
     <link rel="stylesheet" href="sitewide.css">
     <link rel="stylesheet" href="color-and-type.css">
-<!----------- google fonts --------------------->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!---------- phosphor icons -------------------->
- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
- <!------ font awesome icons -------------------->
- <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
-
+     <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
     <title>Color Theory</title>
 </head>
 <body>
-    <h1>Color Theory</h1>
-    <nav class="page-nav"> 
+     <!-- navigation menu -->
+     <header>
+        <nav class="nav">
             <ul>
-                <li><a href="/portfolio-draft/index.html">Home</a></li>
-                <li><a href="/portfolio-draft.resume.html">Résumé</a></li>
-                <li id="animate">Adobe Animate Showcase <i class="fa fa-angle-down animate-arrow"></i>
-                    <ul id="animate_menu">
-                        <li><a href="/portfolio-draft/animate/character-animation.html">Character Animation</a></li>
-                        <li><a href="/portfolio-draft/animate/advertisement.html">Interactive Advertisement</a></li>
-                        <li><a href="/portfolio-draft/animate/infographic.html">Interactive infographic</a></li>
+                <li><a href="/portfolio/index.html">Home</a></li>
+                <li><a href="/portfolio/resume.html">Résumé</a></li>
+                <li id="animate">Adobe Animate Showcase
+                    <i class="fa fa-angle-down dropdown-arrow" id="animate-arrow"></i>
+                    <ul id="animate-dropdown">
+                        <li><a href="/portfolio/animate/animation.html">Character Animation</a></li>
+                        <li><a href="/portfolio/animate/advertisement.html">Interactive Advertisement</a></li>
+                        <li><a href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
                     </ul>
                 </li>
-                <li id="photoshop">Adobe Photoshop Showcase <i class="fa fa-angle-down photoshop-arrow"></i>
-                    <ul id="photoshop_menu">
-                        <li><a href="/portfolio-draft/photoshop/magazine.html">Digitial Magazine Cover</a></li>
-                        <li><a href="/portfolio-draft/photoshop/branding-package.html">Example Branding Package</a></li>
-                        <li><a href="/portfolio-draft/photoshop/restoration.html">Photo Restoration</a></li>
+                <li id="photoshop">Photoshop Showcase 
+                    <i class="fa fa-angle-down dropdown-arrow" id="photoshop-arrow"></i> 
+                    <ul id="photoshop-dropdown">
+                        <li><a href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
+                        <li><a href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
+                        <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
                     </ul>
                 </li>
-                <li><strong>Color Theory</strong></li>
-                <li><a href="/portfolio-draft/typography.html">Typography</a></li>
+                <li><a href="/portfolio/color-theory.html"><strong>Color Theory</strong></a></li>
+                <li><a href="/portfolio/typography.html">Typography</a></li>
             </ul>
         </nav>
+     </header>
 
-    <nav>
+<!-- page title -->
+     <h1 class="page-title">Color Theory</h1>
+   
+
+<!-- page navigation -->
+<nav class="page-nav">
+    <span class="pagenav-title">Jump to:</span>
         <ul>
-            Jump to: 
-            <li><a href="#definitions">Color Theory Definitions</a></li>
+            <li><a href="#definitions">Definitions</a></li>
             <li><a href="#color-schemes">Color Schemes table</a></li>
-            <li><a href="#color-article">Color Theory in Web Design article</a></li>
+            <li><a href="#color-article-title">Color Theory in Web Design article</a></li>
         </ul>
-    </nav>
+     </nav>
 
-    <p class="overview"><strong>Color Theory</strong> refers to the study of how colors work together to influence perceptions and evoke emotions.</p>
+<!-- back to top link button -->
+<div class="tooltip"> <span class="tooltiptext">Back to top</span><a href="#" class="top-link" aria-label="back to top"><i class="fa-regular fa-circle-up"></i></a></div>
+
+     <p class="overview"><strong>Color Theory</strong> refers to the study of how colors work together to influence perceptions and evoke emotions.</p>
 
     <h2 id="definitions">Definitions</h2>
+    <span id="hint">(Hover over each color name to see it in action!)</span>
     <ol>
-        <li><strong>Primary colors</strong> &dash; pure; cannot be created by mixing other colors. The three primary colors are <a href="https://www.colorhexa.com/ff0000" class="red">red</a>, <a href="" class="blue">blue</a>, and <a href="" class="yellow">yellow</a>.</li>
-
-        
-        <li><strong>Secondary colors</strong> &dash; formed by mixing two primary colors. The three secondary colors are <span class="green">green</span>, <span class="violet">violet</span>, and<span class="orange">orange</span>.</li>
+        <li><strong>Primary colors</strong> &dash; pure; cannot be created by mixing other colors. The three primary colors are <span class="red">red</span>, <span class="blue">blue</span>, and <span class="yellow">yellow</span>.</li>
+        <li><strong>Secondary colors</strong> &dash; formed by mixing two primary colors. The three secondary colors are <span class="green">green</span>, <span class="violet">violet</span>, and <span class="orange">orange</span>.</li>
         <li><strong>Tertiary colors</strong> &dash; formed by mixing a primary color with a secondary color. Some examples of tertiary colors include <span class="blue-violet">blue&dash;violet</span>, <span class="yellow-green">yellow&dash;green</span>, and <span class="red-orange">red&dash;orange</span>.</li>
-        <li><strong>Triadic colors</strong> &dash; colors that are spaced out in even increments on the color wheel, such as <span class="red">red</span> <span class="yellow"></span>, and <span class="blue">blue</span>.</li>
+        <li><strong>Triadic colors</strong> &dash; colors that are spaced out in even increments on the color wheel, such as <span class="red">red</span> <span class="yellow">yellow</span>, and <span class="blue">blue</span>.</li>
         <li><strong>Complementary colors</strong> &dash; colors that are opposites on the color wheel, such as <span class="blue">blue</span> and <span class="orange">orange</span>.</li>
         <li><strong>Split colors</strong> &dash; a base color and two colors that would be balanced on the opposite side of the color wheel. An example would be a base color of <span class="red">red</span> &mdash; the split&dash;complements would be <span class="blue-green">blue&dash;green</span> and <span class="yellow-green">yellow&dash;green</span>.<sup>1</sup></li>
         <li><strong>Analogous colors</strong> &dash; colors that share a space on the color wheel, such as <span class="orange">orange</span>, <span class="red-orange">red&dash;orange</span>, and <span class="red">red</span>.</li>
@@ -78,69 +86,85 @@
         <li><strong>Cool colors</strong> &dash; contribute to a calm and soothing atmosphere and can invoke feelings of peace and tranquility. Some examples of cool colors include <span class="blue">blue</span> and <span class="purple">purple</span>.</li>
         <li><strong>Whitespace</strong> &dash; empty space.</li>
     </ol>
-    <p class="sources">Sources: Webucator <br>
+    <p class="sources"><strong>Sources:</strong> Webucator <br>
         <sup>1</sup> <a href="https://etchrlab.com/blogs/news/split-complementary-color-schemes?srsltid=AfmBOorU_nccrL2OlHbTe-RwRvixSMUTbhNYbqF8BCXGLp6R6cxtsQ9Q">Simplifying Color Choice with Split Complementary Color Schemes</a> &dash; EtchrLab</p>
 
-
-    <a href="#" class="top-link" aria-label="back to top"><i class="ph ph-arrow-circle-up"></i></a>
-</div>
 <h2 id="color-schemes">Example Color Schemes</h2>
 
-<table border="1">
+<table>
     <tbody>
         <tr>
-            <th>Scheme Name</th>
-            <th>Colors</th>
+            <th class="theader">Scheme Name</th>
+            <th class="theader">Colors</th>
         </tr>
         <tr>
-           <td>Fun at the Fair</td>
-           <td class="scheme_colors"><span id="fair_color1">#FF0F80</span><span id="fair_color2">#FE4E00</span><span id="fair_color3">#FFAE03</span><span id="fair_color4">#E67F0D</span><span id="fair_color5">#E9190F</span></td> 
+           <td class="scheme-title">Fun at the Fair</td>
+           <td class="scheme_colors"> <span id="fair-color1"> #FF0F80</span>      
+          <span id="fair-color2">#FE4E00</span><span id="fair-color3">#FFAE03</span><span id="fair-color4">#E67F0D</span><span id="fair-color5">#E9190F</span></td> 
         </tr>
         <tr>
-            <td>Radical Reds</td>
-            <td class="scheme_colors"><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732474786/in/dateposted-ff/" title="radical_reds"><img src="https://live.staticflickr.com/65535/54732474786_937bed6a2f_m.jpg" width="240" height="120" alt="radical_reds"></a></td>
+            <td class="scheme-title">Radical Reds</td>
+            <td class="scheme_colors">
+                <span id="reds-one">#AD2831</span> <span id="reds-two">#800E13</span><span id="reds-three">#640D14</span><span id="reds-four">#38040E</span><span id="reds-five">#250902</span>
         </tr>
-         <tr>
-        <td>Blackberry Mint</td>
-        <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732826255/in/dateposted-ff/" title="blackberry_mint"><img src="https://live.staticflickr.com/65535/54732826255_22b69ea4c5_m.jpg" width="240" height="120" alt="blackberry_mint"/></a></td>
+    <tr>
+        <td class="scheme-title">Blackberry Mint</td>
+        <td class="scheme_colors">
+        <span id="mint-one">#7E78D2</span>
+        <span id="mint-two">#BBDBD1</span><span id="mint-three">#BDEDE0</span><span id="mint-four">#B6B8D6</span><span id="mint-five">#6F58C9</span>
+        </td>
+</tr>
+    <tr>
+        <td class="scheme-title">Pastel Pink Paradise</td>
+        <td  class="scheme_colors">
+        <span id="pink-one">#595758</span>
+        <span id="pink-two">#FF92CC</span><span id="pink-three">#FFD5FB</span><span id="pink-four">#FFE4F3</span><span id="pink-five">#FFC8FB</span>
+        </td>
     </tr>
     <tr>
-        <td>Pastel Pink Paradise</td>
-        <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54731635738/in/dateposted-ff/" title="pastel_pink_paradise"><img src="https://live.staticflickr.com/65535/54731635738_b4b295e9f7_m.jpg" width="240" height="120" alt="pastel_pink_paradise"/></a></td>
+        <td class="scheme-title">Summer Nostalgia</td>
+        <td  class="scheme_colors">
+        <span id="summer-one">#F1A09D</span>
+        <span id="summer-two">#EEC0C</span><span id="summer-three">#FFF07C</span><span id="summer-four">#80FF72</span><span id="summer-five">#7EE8FA</span>
+</td>
     </tr>
     <tr>
-        <td>Summer Nostalgia</td>
-        <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732106061/in/dateposted-ff/" title="summer_fun"><img src="https://live.staticflickr.com/65535/54732106061_b07836447e_m.jpg" width="240" height="120" alt="summer_fun"/></a></td>
+        <td class="scheme-title">Autumn Arrival</td>
+        <td  class="scheme_colors">
+        <span id="autumn-one">#E24E1B</span>    
+        <span id="autumn-two">#DA7635</span><span id="autumn-three">#DEDBB0</span><span id="autumn-four">#CA9569</span><span id="autumn-five">#7C5546</span>
+        </td>
     </tr>
     <tr>
-        <td>Autumn Arrival</td>
-        <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732384909/in/dateposted-ff/" title="autumn_arrival"><img src="https://live.staticflickr.com/65535/54732384909_6be171669d_m.jpg" width="240" height="120" alt="autumn_arrival"/></a></td>
-    </tr>
-    <tr>
-        <td>Dark Academia</td>
-        <td><a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/54732162081/in/dateposted-ff/" title="dark_academia"><img src="https://live.staticflickr.com/65535/54732162081_cc0057e996_m.jpg" width="240" height="120" alt="dark_academia"/></a></td>
+        <td class="scheme-title">Dark Academia</td>
+        <td  class="scheme_colors">
+        <span id="academia-one">#400406</span>
+        <span id="academia-two">#515A47</span><span id="academia-three">#D7BE82</span><span id="academia-four">#7A4419</span><span id="academia-five">#755C1B</span>
+        </td>
     </tr>
     </tbody>
 </table>
 
 
-<h2 id="color-article">Color Theory in Web Design</h2>
+
 <article>
-    <p style="text-indent: 50px;">When it comes to web design, color goes beyond being simply an aesthetic choice &mdash; it is a tool used to evoke strong emotions, influence perceptions, and assists in setting the tone of a project. This article explores the role of color in two significantly differing websites: <a href="https://dashingdiva.com/">Dashing Diva</a>, a DIY nail/beauty brand, and <a href="https://open.spotify.com/">Spotify</a>, a global music&dash;streaming platform.</p>
-    <p style="text-indent: 50px;">Dashing Diva's UI utilizes bright and muted colors. The white background permits the vibrant colors and unique designs of the products to "pop" against the page. The black text against the white also provides sufficient contrast, making the words legible and accessible while still allowing the products to shine.</p>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066314934/in/dateposted-ff/" title="dashingdiva_website2"><img src="https://live.staticflickr.com/65535/55066314934_df08671bb6.jpg" width="500" height="236" alt="dashingdiva_website2"/></a>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066063711/in/dateposted-ff/" title="dashingdiva_website1"><img src="https://live.staticflickr.com/65535/55066063711_6036721edc.jpg" width="500" height="236" alt="dashingdiva_website1"/></a>
+    <h2 id="color-article-title">Color Theory in Web Design</h2>
+    <p class="color-article">When it comes to web design, color goes beyond being simply an aesthetic choice &mdash; it is a tool used to evoke strong emotions, influence perceptions, and assists in setting the tone of a project. This article explores the role of color in two significantly differing websites: <a href="https://dashingdiva.com/">Dashing Diva</a>, a DIY nail/beauty brand, and <a href="https://open.spotify.com/">Spotify</a>, a global music&dash;streaming platform.</p>
+    <p class="color-article">Dashing Diva's UI utilizes bright and muted colors. The white background permits the vibrant colors and unique designs of the products to "pop" against the page. The black text against the white also provides sufficient contrast, making the words legible and accessible while still allowing the products to shine.</p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066314934/in/dateposted-ff/" title="dashingdiva_website2"><img src="https://live.staticflickr.com/65535/55066314934_df08671bb6.jpg" alt="dashingdiva_website2"></a>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066063711/in/dateposted-ff/" title="dashingdiva_website1"><img src="https://live.staticflickr.com/65535/55066063711_6036721edc.jpg" alt="dashingdiva_website1"></a>
     <p>Additionally, the pastel pink used for the header and footer bar aids in establishing a feminine tone.</p>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066248988/in/dateposted-ff/" title="DD_headerbar"><img src="https://live.staticflickr.com/65535/55066248988_4e8ea5fc29.jpg" width="500" height="24" alt="DD_headerbar"/></a>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066315504/in/dateposted-ff/" title="DD_footerbar"><img src="https://live.staticflickr.com/65535/55066315504_c54d9bff2c.jpg" width="500" height="165" alt="DD_footerbar"/></a>
-    <p style="text-indent: 50px;">Spotify's UI is a case study in brand recognition. Its logo features an instantly recognizable color &mdash; Spotify green. </p>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066248633/in/dateposted-ff/" title="Spotify_Full_Logo_RGB_Green"><img src="https://live.staticflickr.com/65535/55066248633_43eef55f81.jpg" width="500" height="137" alt="Spotify_Full_Logo_RGB_Green"/></a>
-    <p style="font-size: 70%;"><a href="https://developer.spotify.com/documentation/design#using-our-logo">Source</a></p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066248988/in/dateposted-ff/" title="DD_headerbar"><img src="https://live.staticflickr.com/65535/55066248988_4e8ea5fc29.jpg" width="500" height="24" alt="DD_headerbar"></a>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066315504/in/dateposted-ff/" title="DD_footerbar"><img src="https://live.staticflickr.com/65535/55066315504_c54d9bff2c.jpg" width="500" height="165" alt="DD_footerbar"></a>
+    <p class="color-article">Spotify's UI is a case study in brand recognition. Its logo features an instantly recognizable color &mdash; Spotify green. </p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55066248633/in/dateposted-ff/" title="Spotify_Full_Logo_RGB_Green"><img src="https://live.staticflickr.com/65535/55066248633_43eef55f81.jpg" alt="Spotify_Full_Logo_RGB_Green"></a>
+    <p class="color-article"><a href="https://developer.spotify.com/documentation/design#using-our-logo">Source</a></p>
     <p><a href="https://developer.spotify.com/documentation/design#using-our-logo">As per the official guidelines</a> laid out by Spotify, “the green logo should only be used on a black or white background,” allowing the primary green colorway to take center stage. Furthermore, the minimal palette and dark background help facilitate an immersive environment, allowing the focus to remain on the service (music streaming) in contrast to Dashing Diva, where the focus is on the variety of products. 
     </p>
-    <p style="text-indent: 50px;">In essence, color is used efficiently on each website to reflect their differing strategic goals. Dashing Diva uses minimal, muted colors in the UI to allow the merchandise to take center stage, while Spotify utilizes color for brand recognition and usability. 
+    <p class="color-article">In essence, color is used efficiently on each website to reflect their differing strategic goals. Dashing Diva uses minimal, muted colors in the UI to allow the merchandise to take center stage, while Spotify utilizes color for brand recognition and usability. 
     </p>
 </article>
+
 
 </body>
 </html>

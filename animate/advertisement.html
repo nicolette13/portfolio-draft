@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- external stylesheets -->
+    <link rel="stylesheet" href="../sitewide.css">
+    <link rel="stylesheet" href="../showcase.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
+    <title>Adobe Animate Showcase</title>
+
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="advertisement.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("6808C14729A94D3C9654CCA597C123D8");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.Richmond_Interactive_Advertisement();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+</head>
+<body onload="init();">
+    <!-- navigation menu -->
+     <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="/portfolio/index.html">Home</a></li>
+                <li><a href="/portfolio/resume.html">Résumé</a></li>
+                <li id="animate"><strong>Adobe Animate Showcase</strong>
+                    <i class="fa fa-angle-down dropdown-arrow" id="animate-arrow"></i>
+                    <ul id="animate-dropdown">
+                        <li><a href="/portfolio/animate/animation.html">Character Animation</a></li>
+                        <li><a href="/portfolio/animate/advertisement.html"><strong>Interactive Advertisement</strong></a></li>
+                        <li><a href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
+                    </ul>
+                </li>
+                <li id="photoshop">Photoshop Showcase 
+                    <i class="fa fa-angle-down dropdown-arrow" id="photoshop-arrow"></i> 
+                    <ul id="photoshop-dropdown">
+                        <li><a href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
+                        <li><a href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
+                        <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
+                    </ul>
+                </li>
+                <li><a href="/portfolio/color-theory.html">Color Theory</a></li>
+                <li><a href="/portfolio/typography.html">Typography</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <h2 class="project-title">Interactive Advertisement</h2>
+
+     <p class="project-info">Create an animated advertisement for a product or service. Design an interactive web banner that responds to user actions. The purpose of this project is to demonstrate proficiency in Adobe Animate, as well as creating a visually appealing and professional advertisement.</p>
+
+ <div id="animation_container" style="background-color:rgba(255, 243, 221, 1.00); width:550px; height:400px">
+		<canvas id="canvas" width="550" height="400" style="position: absolute; display: block; background-color:rgba(255, 243, 221, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:550px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+<p class="credits">Wheel of Fortune EPS file retrieved from <a href="https://www.vecteezy.com/vector-art/2879010-wheel-of-fortune-lucky-icon-vector-illustration">Vecteezy</a></p>
+</body>
+</html>

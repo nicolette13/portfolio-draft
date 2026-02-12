@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Magazine Cover</title>
+     <!-- external stylesheets -->
+     <link rel="stylesheet" href="../sitewide.css">
+     <link rel="stylesheet" href="../showcase.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
+    <title>Photoshop Showcase</title>
+
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/portfolio/index.html">Home</a></li>
-            <li><strong>Animate Showcase</strong></li>
-                <ul>
-                    <li><a href="/portfolio/character-animation.html">Character Animation</a></li>
-                    <li><a href="/portfolio/advertisement.html">Interactive Advertisement</a></li>
-                    <li><a href="/portfolio/infographic.html">Interactive Infographic</a></li>
-                </ul>
-            <li><strong>Photoshop Showcase</strong></li>
-                <ul>
-                    <li><strong>Digital Magazine Cover</li>
-                    <li><a href="/portfolio/restoration.html">Photo Restoration</a></li>
-                    <li><a href="/portfolio/branding-package.html">Branding Package</a></li>
-                </ul>
-            <li><a href="/portfolio/color-theory.html">Color Theory</a></li>
-            <li><a href="/portfolio/typography.html">Typography</a></li>
-        </ul>
-    </nav>
-  
-<h1>Digital Magazine Cover</h1>
-    <p>Create a digital magazine cover using Adobe Photoshop that features a fictional celebrity or
-        public figure. The objective of the project is to demonstrate proficiency in Photoshop and
-        employ basic design principles by designing and creating a visually appealing layout.</p>
-    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55057041415/in/dateposted-ff/" title="digital magazine cover"><img src="https://live.staticflickr.com/65535/55057041415_0c439c8e79.jpg" width="353" height="500" alt="digital magazine cover"/></a>  
+     <!-- navigation menu -->
+     <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="/portfolio/index.html">Home</a></li>
+                <li><a href="/portfolio/resume.html">Résumé</a></li>
+                <li id="animate">Adobe Animate Showcase
+                    <i class="fa fa-angle-down dropdown-arrow" id="animate-arrow"></i>
+                    <ul id="animate-dropdown">
+                        <li><a href="/portfolio/animate/animation.html">Character Animation</a></li>
+                        <li><a href="/portfolio/animate/advertisement.html">Interactive Advertisement</a></li>
+                        <li><a href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
+                    </ul>
+                </li>
+                <li id="photoshop"><strong>Photoshop Showcase</strong>
+                    <i class="fa fa-angle-down dropdown-arrow" id="photoshop-arrow"></i> 
+                    <ul id="photoshop-dropdown">
+                        <li><a href="/portfolio/photoshop/magazine.html"><strong>Digital Magazine Cover</strong></a></li>
+                        <li><a href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
+                        <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
+                    </ul>
+                </li>
+                <li><a href="/portfolio/color-theory.html">Color Theory</a></li>
+                <li><a href="/portfolio/typography.html">Typography</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- page title -->
+     <h2 class="project-title">Digital Magazine Cover</h2>
+
+     <p class="project-info">Create a digital magazine cover using Adobe Photoshop that features a fictional celebrity or public figure. The objective of this project is to demonstrate proficiency in Photoshop and employ basic design principles by designing and creating a visually appealing layout.</p>
+     
+     <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55057041415/in/dateposted-ff/" title="digital magazine cover"><img id="magazine" src="https://live.staticflickr.com/65535/55057041415_0c439c8e79_z.jpg" alt="black and white magazine cover"></a>
 </body>
 </html>

@@ -1,19 +1,21 @@
 .page-title{
+    font-size: 250%;
+    padding: .5em;
+    margin: .5em; 
+    text-align: center;
+}
+
+.bio{
+    font-size: 140%; 
+    margin: 1em; 
     text-align: center;
 }
 
 .contact{
     text-align: center;
-    font-size: 1.1rem;
-    display: flex;
-    margin: 2rem 1rem;
+    font-size: 130%; 
 }
 
-.bio{
-    margin: 2rem 1rem;
-}
-
-i.ph{
-    font-weight: bolder; 
-    font-size: 1.2rem;
+span{
+    padding: .2em; 
 }

@@ -1,0 +1,131 @@
+iframe{
+    width: 500px; 
+    height: 281px; 
+    border: transparent; 
+}
+
+h3{
+    font-size: 150%; 
+    margin-bottom: -.4em; 
+}
+
+div{
+    margin: 1em;
+    padding: .3em; 
+}
+
+/* BACK TO TOP BUTTON */
+
+.top-link{
+    position: fixed; 
+    text-decoration: none;
+    color: var(--headerfontcolor); 
+    background-color: var(--accent1);
+    padding: .3em; 
+    font-size: 1.8em;
+    border-radius: 10%; 
+    bottom: 2em; 
+    right: 2em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+}
+
+/* TOOLTIPS */
+
+.tooltip{
+    position: fixed; 
+    display: flex;
+    cursor: pointer;
+    bottom: 105px;
+    right: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltiptext{
+    opacity: 0;
+    width: 90px;
+    background-color: var(--accent1);
+    color: var(--headerfontcolor);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute; 
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:hover .tooltiptext{
+   opacity: 1;
+}
+
+/* PAGE NAVIGATION */
+
+.page-nav{
+    background-color: var(--accent2);
+    width: 290px;
+    border-radius: 10px;
+    padding: 10px; 
+    margin-left: 20px; 
+    box-shadow: 5px 5px 15px rgba(45, 36, 44, .2);
+}
+
+.pagenav-title{
+    font-size: 120%; 
+    font-weight: bold;
+    margin: 1em; 
+    color: var(--bodyfontcolor);
+}
+
+.page-nav a {
+    transition: color 0.3s ease-in-out;
+    color: var(--bodyfontcolor); 
+}
+
+.page-nav a:hover{
+    color: var(--accent3); 
+}
+
+/* PROJECT TITLES AND INFO */
+
+.project-title{
+    text-align: center;
+    font-size: 200%; 
+}
+
+.project-info{
+    margin-top: 2em; 
+}
+
+/* CREDITS/SOURCES */
+
+.credits a {
+    color: var(--accent3); 
+}
+
+.credits{
+    font-size: 70%; 
+}
+
+/* PHOTOSHOP IMAGES */
+
+#branding-logo{
+    width: 200px;
+    height: 200px;
+}
+
+#branding-cards{
+    width: 340px; 
+}
+
+.social-banner{
+    width: 640px; 
+}
+
+#magazine, .restoration-photo {
+width:540px;
+}
+
+

@@ -3,9 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- external stylesheets -->
+     <link rel="stylesheet" href="sitewide.css">
+     <link rel="stylesheet" href="color-and-type.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
     <title>Typography</title>
 </head>
 <body>
-    
+    <!-- navigation menu -->
+     <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="/portfolio/index.html">Home</a></li>
+                <li><a href="/portfolio/resume.html">Résumé</a></li>
+                <li id="animate">Adobe Animate Showcase
+                    <i class="fa fa-angle-down dropdown-arrow" id="animate-arrow"></i>
+                    <ul id="animate-dropdown">
+                        <li><a href="/portfolio/animate/animation.html">Character Animation</a></li>
+                        <li><a href="/portfolio/animate/advertisement.html">Interactive Advertisement</a></li>
+                        <li><a href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
+                    </ul>
+                </li>
+                <li id="photoshop">Photoshop Showcase 
+                    <i class="fa fa-angle-down dropdown-arrow" id="photoshop-arrow"></i> 
+                    <ul id="photoshop-dropdown">
+                        <li><a href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
+                        <li><a href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
+                        <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
+                    </ul>
+                </li>
+                <li><a href="/portfolio/color-theory.html">Color Theory</a></li>
+                <li><a href="/portfolio/typography.html"><strong>Typography</strong></a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- page title -->
+     <h1 class="page-title">Typography</h1>
+   
+<!-- page navigation -->
+<nav class="page-nav">
+     <span class="pagenav-title">Jump to:</span>
+        <ul>
+            <li><a href="#definitions">Definitions</a></li>
+            <li><a href="#typeface-article-title">A Brief Overview of Font Types article</a></li>
+            <li><a href="#typography-article-title">Typography in Web Design article</a></li>
+        </ul>
+     </nav>
+
+<!-- back to top link button -->
+ <div class="tooltip"> <span class="tooltiptext">Back to top</span><a href="#" class="top-link" aria-label="back to top"><i class="fa-regular fa-circle-up"></i></a></div>
+
+ <p class="overview"><strong>Typography</strong> refers to the process of choosing typefaces, font styles, and spacing to bring clarity and readibilty to a display of information.</p>
+
+<h2 id="definitions">Definitions</h2>
+<ol>
+    <li><strong>Typeface</strong> &dash; encompasses a family of characters that share a common design theme.</li>
+    <li><strong>Font</strong> &dash; refers to a specific weight, size, and style within a typeface family.</li>
+    <li><strong>X-height</strong> &dash; height of a lowercase x. Will vary among typefaces.</li>
+    <li><strong>Ascender line</strong> &dash; stroke of a lowercase character that extends above x-height.</li>
+    <li><strong>Baseline</strong> &dash; line onto which all characters align.</li>
+    <li><strong>Descender line</strong> &dash; stroke of a lowercase character that dips below baseline.</li>
+    <li><strong>Serif</strong> &dash; corners, or "feet", that exist on the end of strokes. </li>
+    <li><strong>Terminal</strong> &dash; stroke end that does not have a serif. </li>
+    <li><strong>Loop</strong> &dash; found at the bottom of some lowercase letters. </li>
+    <li><strong>Stem</strong> &dash; a vertical or diagonal stroke.</li>
+</ol>
+<p class="sources"><strong>Source:</strong> Webucator</p>
+
+<article>
+    <h2 id="typeface-article-title">A Brief Overview of Font Types</h2>
+<p class="typography-article">Fonts play a major role in how we read, understand, and respond to text. Whether you're designing a website or writing an official document, choosing the right font can make or break your project. Fonts are typically grouped into different categories based on their visual characteristics. This article explores just a few of the most common font types. </p>
+
+<ol>
+    <li><p><strong>Serif</strong><br>
+        Serif fonts have small "feet", called <em>serifs</em>, that exist on on the end of strokes.</p>
+            <ul>
+                <li>These fonts are typically considered traditional and formal.</li>
+                <li>They are most often used in books, newspapers, and official documents.</li>
+            </ul>
+        <p>Some examples of serif fonts include:</p>
+            <ol>
+               <li>Times New Roman (<a href="https://fonts.adobe.com/fonts/times-new-roman">Adobe Fonts</a>)</li>
+                <li>EB Garamond (<a href="https://fonts.google.com/specimen/EB+Garamond?categoryFilters=Serif:%2FSerif%2F*,%2FSlab%2F*">Google Fonts</a>)</li>
+                <li>Libre Baskerville (<a href="https://fonts.google.com/specimen/Libre+Baskerville?categoryFilters=Serif:%2FSerif%2F*,%2FSlab%2F*">Google Fonts</a>)</li>
+            </ol>
+    </li>
+    <li><p><strong>Sans Serif</strong><br>
+    Sans serif fonts do not have the small serifs on the end of the letters ("sans" meaning "without").</p>
+        <ul>
+            <li>These fonts are typically considered modern and clean. </li>
+            <li>They are most often used in mobile apps and modern branding.</li>
+        </ul>
+    <p>Some examples of sans serif fonts include:</p>
+    <ol>
+       <li>Arial (<a href="https://fonts.adobe.com/fonts/arial">Adobe Fonts</a>)</li>
+            <li>Roboto (<a href="https://fonts.google.com/specimen/Roboto">Google Fonts</a>)</li>
+            <li>Montserrat (<a href="https://fonts.google.com/specimen/Montserrat?categoryFilters=Sans+Serif:%2FSans%2F*">Google Fonts</a>)</li> 
+    </ol>
+    </li>
+<li><p><strong>Decorative</strong><br>
+Decorative fonts come in a variety of looks, from whimsical to eccentric.</p>
+    <ul>
+        <li>They are often used in logos, headers, and advertising.</li>
+    </ul>
+    <p>Some examples of decorative fonts include:</p>
+        <ol>
+           <li>Lobster (<a href="https://fonts.google.com/specimen/Lobster">Google Fonts</a>)</li>
+            <li>West End (<a href="https://fonts.adobe.com/fonts/west-end">Adobe Fonts</a>)</li>
+            <li>Showboat (<a href="https://www.1001fonts.com/showboat-font.html">1001 Fonts</a>)</li> 
+        </ol>
+</li>
+<li><p><strong>Script</strong><br>
+Script fonts also come in a variety of looks, ranging from elegant to playful.</p>
+    <ul>
+        <li>They often resemble handwritten or calligraphic text.</li>
+        <li>Commonly used for invitations, greeting cards, and decorative headlines.</li>
+    </ul>
+    <p>Some examples of script fonts include:</p>
+    <ol>
+        <li>Caveat (<a href="https://fonts.google.com/specimen/Caveat">Google Fonts</a>)</li>
+            <li>Great Vibes (<a href="https://www.1001fonts.com/great-vibes-font.html">1001 Fonts</a>)</li>
+            <li>Brooklyn Heritage (<a href="https://fonts.adobe.com/fonts/brooklyn-heritage-script">Adobe Fonts</a>)</li>
+    </ol>
+</li>
+</ol>
+    <p class="typography-article">In conclusion, each type of font serves a different purpose. Understanding the different typefaces can help you better choose the font best effective for your project.</p>    
+</article>
+
+
+<article>
+    <h2 id="typography-article-title">Typography in Web Design</h2>
+    <p class="typography-article">Typography plays a critical role in shaping how visitors experience a webpage. All websites rely on text to relay information; the purpose and execution are where websites can differ significantly, depending on a site's specific goals. This article examines the role of typography on two contrasting websites: <a href="https://www.nytimes.com/">The New York Times</a> a news website, and <a href="https://www.apple.com/">Apple</a>, a tech brand.</p>
+
+    <p class="typography-article">For The New York Times, typography is mainly about readability. Considering articles are text-heavy, the typeface used must be easy to read for long periods of time, and with large blocks of text. For this purpose, the site primarily uses a serif font, <strong>Georgia</strong>, for the body of articles. Additionally, the site may have chosen this font to convey an air of professionalism and trustworthiness.</p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55067408786/in/dateposted-ff/" title="New York Times - article text"><img src="https://live.staticflickr.com/65535/55067408786_9c8d0a911c.jpg" alt="New York Times - article text"></a>
+
+    <p>Furthermore, the site uses a serif typeface for headlines, <strong>Cheltenham</strong>, typically in a larger point and bolded to grab readers' attention and establish hierarchy.</p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55067656244/in/dateposted-ff/" title="NY Times - headline"><img src="https://live.staticflickr.com/65535/55067656244_524d4c126d_w.jpg" alt="NY Times - headline"></a>
+
+    <p class="typography-article">The logo for the New York Times employs an instantly recognizable gothic blackletter typeface, <strong>Engravers' Old English BT</strong>. This typeface was originally created by Henry Jarvis Raymond in 1851 exclusively for The New York Times, during the paper's inception (when it was then known as the New-York Daily Times). This font remains a proprietary typeface to this day, meaning it is not currently available for public use. <sup style="font-size: 70%;">1</sup></p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55067593568/in/dateposted-ff/" title="NY Times - logo"><img src="https://live.staticflickr.com/65535/55067593568_3cc36c1b2e_n.jpg" alt="NY Times - logo"></a>
+
+    <p class="typography-article">The New York Times also utilizes <em>how</em> the text is laid out on the page in order to meet its goals. Headlines are larger and bolder in order to grab attention and signal importance, while the body text of an article is broken down into digestible paragraphs. Additionally, line spacing is controlled to enhance accessibility and reduce eyestrain.</p>
+
+    <p class="typography-article">For Apple, readability is also important, however, the primary goal is persuasion &mdash; persuading the viewer to explore products and make a purchase. Much like The New York Times headlines, product names are typically bold and displayed in large point to draw attention.  </p>
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/201140087@N08/55071144003/in/dateposted-ff/" title="apple.com"><img src="https://live.staticflickr.com/65535/55071144003_33ab2a3bb5.jpg" alt="apple.com"></a>
+
+    <p class="typography-article">Furthermore, Apple.com predominantly uses its own proprietary typeface, <strong>San Francisco</strong> (or SF Pro), likely to create brand recognition and distinguish itself from its competition. In addition, a sans-serif typeface conveys a more modern and efficient feel often associated with tech brands.</p>
+
+    <p class="typography-article">In conclusion, both websites heavily rely on typography, but their differing goals result in varied strategies. The New York Times uses typography to support large blocks of text and long-form reading, as well as establish trust. For news websites, typography is <strong>neutral</strong>, allowing the viewer to focus on the information being presented rather than being distracted by the design. In contrast, for Apple, the typography is <strong>active</strong>, influencing the consumer to take action and make a purchase. For e-commerce sites, the text is intended to draw attention, persuade action, and establish branding.</p>
+
+    <p class="typography-article">In this way, typography is not simply about choosing the right typeface &mdash; it is a powerful tool used to build and shape a website, depending on that site's purpose and intended audience. </p>
+    <p class="sources"><sup>1</sup><a href="https://sensatype.com/every-font-used-by-the-new-york-times-in-2025">Every Font Used by The New York Times in 2026 &mdash; Explained</a> &dash; Sensatype Studio </p>
+</article>
+
 </body>
 </html>

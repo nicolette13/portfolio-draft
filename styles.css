@@ -1,0 +1,25 @@
+main {
+  margin: 10px 50px;
+}
+
+label {
+  margin: 10px;
+}
+
+button,
+input,
+output {
+  margin-left: 10px;
+}
+
+li {
+  margin: 5px;
+}
+
+.right {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}

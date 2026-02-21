@@ -1,21 +1,10 @@
-.page-title{
-    font-size: 250%;
-    padding: .5em;
-    margin: .5em; 
-    text-align: center;
-}
 
-.bio{
-    font-size: 140%; 
-    margin: 1em; 
-    text-align: center;
-}
 
-.contact{
-    text-align: center;
-    font-size: 130%; 
-}
+/* slideshow */
 
-span{
-    padding: .2em; 
+.slides-container{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%); 
+    width: 80%;
 }

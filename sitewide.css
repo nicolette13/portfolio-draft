@@ -7,28 +7,25 @@
 
 /* LIGHT/DARK MODE */
 
-:root, html[data-theme='light']{
-  --lightoff: flex; 
-  --lighton: none; 
-  --headerfontcolor: #fefefe;
-  --bodyfontcolor: #393939;  
-  --bgcolor:  	#fffcf8; 
+:root, html[data-bs-theme='light']{
+  --bodyfontcolor: #393939;
+  --bs-body-bg:  linear-gradient(308deg,rgba(238, 201, 255, 1) 0%, rgba(251, 240, 255, 1) 100%);  
+  --bs-navbar-color: #fefefe; 
+  --bgcolor: #fffcf8; 
   --accent1: #b6b2ab; 
   --accent2: #ffe1fd; 
   --accent3: #ce4f92; 
-  --boxshadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
+  --boxshadow: 0 15px 20px rgba(31, 0, 62, 0.047); 
 }
 
-html[data-theme='dark']{
-  --lightoff: none; 
-  --lighton: flex; 
-  --bgcolor: #171717; 
-  --headerfontcolor: #efefef; 
+html[data-bs-theme='dark']{
+  --bs-body-bg: linear-gradient(308deg, rgba(62, 0, 89, 1) 0%, rgba(94, 0, 138, 1) 100%);
+  --bs-navbar-color: #171717;  
   --bodyfontcolor: #fefefe;
   --accent1: #2c2c2c; 
   --accent2: #ef72e6; 
   --accent3: #ce4f92; 
-  --boxshadow: 0 15px 20px rgba(44, 44, 44, .5); 
+  --boxshadow: 0 15px 20px rgba(24, 1, 53, 0.299); 
 }
 
 html.theme-transition, html.theme-transition *, html.theme-transition *::before, html.theme-transition *::after{
@@ -36,94 +33,93 @@ html.theme-transition, html.theme-transition *, html.theme-transition *::before,
   transition-delay: 0.3s;
 }
 
-@keyframes lightswitch {
-  50% {
-    transform: scaleX(-1);
-  }
+/* LIGHT/DARK MODE TOGGLE BUTTON */
+
+.theme-toggles-container{
+  display: flex; 
+  margin-right: 5px; 
 }
 
+.checkbox{
+  opacity: 0; 
+}
 
+.theme-toggle{
+  width: 50px; 
+  height: 26px; 
+  background-color: var(--bodyfontcolor);
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px; 
+  position: relative;
+  border-radius: 50px;
+  margin-top: 10px; 
+  margin-right: -10px;
+}
 
-#theme-toggle {
-  width: 56px;
-  height: 56px;
+i.fa-sun, i.fa-moon{
+  font-size: 17px; 
+  cursor: pointer; 
+}
+
+i.fa-sun{
+  color: #ff8c00;
+}
+
+i.fa-moon{
+  color: #89cff0;
+}
+
+.toggle-cover{
+  width: 20px; 
+  height: 20px; 
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  line-height: 1;
+  background-color: var(--headerfontcolor);
+  position: absolute;
+  transition: transform 0.2s linear;
+  margin-left: -1px;
 }
 
-.input {
-  display: none;
+.checkbox:checked + .theme-toggle{
+  background-color: #fef6f6;
 }
 
-.icon {
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
-  transition: transform 500ms;
-  line-height: 0.1;
+.checkbox:checked + .theme-toggle .toggle-cover{
+  background-color: var(--accent1);
+    transform: translateX(22px);
 }
 
-.icon--moon {
-  transition-delay: 200ms;
-  color: #b4b4b4;
+/* FONT SIZE BUTTONS */
+
+.font-btns{
+  margin-left: 2rem;
+  align-items: flex-end;
+  display: flex; 
 }
 
-.icon--sun {
-  transform: scale(0);
-  color: #ffa500;
+button.font-toggle{
+  background-color: var(--bodyfontcolor);
+  border-width: .1px; 
+  border-radius: 3px; 
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--bgcolor);
+  cursor: pointer; 
+  transition: all 0.2s ease;
 }
 
-#switch:checked + .icon--moon {
-  transform: rotate(360deg) scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-  transition-delay: 200ms;
-  transform: scale(1) rotate(360deg);
-}
-
-
-
-
-
-
-
-#lightoff, #lighton{
-  cursor: pointer;
-  font-size: 150%; 
-  position: absolute; 
-  transition: color 0.3s ease-in-out; 
-}
-
-#lightoff{
-  display: var(--lightoff); 
-
-}
-
-#lighton{
-  display: var(--lighton);
-}
-
-#lightoff:hover, #lighton:hover{
-  color: var(--accent3); 
-    animation: lightswitch 0.75s 1; 
-}
-
-
-
-/* FONT TOGGLES */
 #small{
-  font-size: 14px; 
+  font-size: 12px; 
+  margin-right: 5px; 
 }
 
 #medium{
-  font-size: 18px; 
+  font-size: 16px; 
 }
 
 #large{
-  font-size: 22px; 
+  font-size: 20px; 
+  margin-left:5px; 
 }
 
 /* TIPPY TOOLTIPS */
@@ -163,6 +159,8 @@ html {
   font-family: var(--fontfamily);
   font-size: var(--fontsize);
   scroll-behavior: smooth;
+  background:var(--bs-body-bg);
+  transition: all 0.3s linear;
 }
 
 /* Sections
@@ -175,7 +173,6 @@ html {
 body {
   margin: 0;
   /* added styles */
-  background-color: var(--bgcolor);
   color: var(--bodyfontcolor);
 }
 
@@ -522,10 +519,11 @@ p, h1, h2, h3, h4, h5, h6, img, iframe, table, article{
 header{
     margin: 0; 
     padding: 0; 
-    background-color: var(--accent1);
+    background-color: var(--bs-body-bg-);
     box-shadow: var(--boxshadow);
     font-size: 110%; 
-    color: var(--headerfontcolor); 
+    display: inline-block; 
+    width: 100%; 
 }
 
 .nav::after{
@@ -539,6 +537,7 @@ header{
     padding: 0; 
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%; 
     height: 8vh; 

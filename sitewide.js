@@ -8,29 +8,31 @@ tippy('[data-tippy-content', {
 }); 
 
 
+//  LIGHT/DARK MODE 
 
+ const toggleBtn = document.querySelector('input[type="checkbox"]');
 
-// LIGHT/DARK MODE
-
-const themeToggleBtn = document.getElementById('theme-toggle'); 
-
-const htmlElem = document.documentElement; 
-
-themeToggleBtn.addEventListener('click', () => {
-    function setTheme(theme){
-        htmlElem.setAttribute('data-theme', theme); 
-        localStorage.setItem('theme', theme); 
+ const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null; 
+        if(currentTheme){
+            document.documentElement.setAttribute('data-bs-theme', currentTheme);
+            if(currentTheme === 'dark'){
+                toggleBtn.checked = true; 
+            }
+        }
+        
+    function changeTheme(e){
+        if(e.target.checked){
+            document.documentElement.setAttribute('data-bs-theme', 'dark'); 
+            localStorage.setItem('theme', 'dark'); 
+        } else{
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+            localStorage.setItem('theme', 'light'); 
+        }
     }
-    function toggleTheme(){
-       const currentTheme = htmlElem.getAttribute('data-theme'); 
-       const newTheme = currentTheme === 'light' ? 'dark' : 'light'; 
-        setTheme(newTheme); 
-    }
 
-    function themeTransition(){
-        htmlElem.classList.add('theme-transition'); 
-    }
-}); 
+    
+    toggleBtn.addEventListener('change', changeTheme, false); 
+
 
 
 // TOGGLE FONT SIZES

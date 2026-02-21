@@ -1,8 +1,6 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+	"folders": [],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Quiz_starting_files"
+	}
 }

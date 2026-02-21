@@ -1,73 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- external stylesheets -->
-     <link rel="stylesheet" href="sitewide.css">
-     <link rel="stylesheet" href="home.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/f69872f1b2.js" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+     <!-- external stylesheets -->
+     <link rel="stylesheet" href="sitewide.css">
+     <link rel="stylesheet" href="home.css">
 
     <title>Portfolio</title>
 </head>
 <body id="main">
-    <!-- navigation menu -->
-     <header>
-        <nav class="nav">
-            <ul>
-                <li><a href="/portfolio/index.html"><strong>Home</strong></a></li>
-                <li><a href="/portfolio/resume.html">Résumé</a></li>
-                <li id="animate">Adobe Animate Showcase
-                    <i class="fa fa-angle-down dropdown-arrow" id="animate-arrow"></i>
-                    <ul id="animate-dropdown">
-                        <li><a href="/portfolio/animate/animation.html">Character Animation</a></li>
-                        <li><a href="/portfolio/animate/advertisement.html">Interactive Advertisement</a></li>
-                        <li><a href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
-                    </ul>
-                </li>
-                <li id="photoshop">Photoshop Showcase
-                    <i class="fa fa-angle-down dropdown-arrow" id="photoshop-arrow"></i> 
-                    <ul id="photoshop-dropdown">
-                        <li><a href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
-                        <li><a href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
-                        <li><a href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
-                    </ul>
-                </li>
-                <li><a href="/portfolio/color-theory.html">Color Theory</a></li>
-                <li><a href="/portfolio/typography.html">Typography</a></li>
-            </ul>
-        <!-- THEME & FONT BUTTONS -->
-      
+    <!-- boostrap nav bar -->
+ <header>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio/resume.html">Résumé</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Adobe Animate Showcase
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/portfolio/animate/animation.html">Character Animation</a></li>
+            <li><a class="dropdown-item" href="/portfolio/animate/infographic.html">Interactive Infographic</a></li>
+            <li><a class="dropdown-item" href="/portfolio/animate/advertisement.html">Interactive Advertisement</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Photoshop Showcase
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/portfolio/photoshop/magazine.html">Digital Magazine Cover</a></li>
+            <li><a class="dropdown-item" href="/portfolio/photoshop/branding.html">Example Branding Package</a></li>
+            <li><a class="dropdown-item" href="/portfolio/photoshop/restoration.html">Photo Restoration</a></li>
+          </ul>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="/portfolio/resume.html">Color Theory</a>
+        </li> <li class="nav-item">
+          <a class="nav-link" href="/portfolio/resume.html">Typography</a>
+        </li>
+      </ul>
+ <!-- light/dark mode toggle -->
+    <div class="theme-toggles-container">
+               <input type="checkbox" class="checkbox" id="checkbox">
+               <label for="checkbox" class="theme-toggle">
+               <i class="fa-regular fa-sun" data-tippy-content="switch to light mode"></i>
+               <i class="fa-regular fa-moon" data-tippy-content="switch to dark mode"></i>
+               <div class="toggle-cover"></div>
+            </label>
 
-
-
-
-      <!--  <label id="theme-toggle">
-                <i class="fa-regular fa-sun theme-toggle" id="lighton" data-tippy-content="switch to light mode"></i>
-                <i class="fa-regular fa-moon theme-toggle" id="lightoff" data-tippy-content="switch to dark mode"></i> 
-        </label> -->
-        <button id="small" data-tippy-content="small font">A</button>
-        <button id="medium" data-tippy-content="medium font">A</button>
-        <button id="large" data-tippy-content="large font">A</button>
-     </div>
+<!-- font size buttons -->
+ <div class="font-btns">
+        <button id="small" class="font-toggle" data-tippy-content="switch to small font">A</button>
+        <button id="medium" class="font-toggle" data-tippy-content="switch to medium font">A</button>
+        <button id="large" class="font-toggle" data-tippy-content="switch to large font">A</button>
+           
+</div>
+    
+    </div>
+        </div>
     </nav>
-     </header>
+ </header>
 
 
-     <!-- page content -->
 
-     <h1 class="page-title">Nicolette Richmond's Portfolio</h1>
-    
-        <p class="bio">Web Designer focused on crafting clean, intuitive interfaces with a strong emphasis on typography, visual hierarchy, and usability. Explore my portfolio above.</p>
-    
-        <p class="contact"><i class="fa fa-mobile-screen"></i> <span id="phone">561(373)&dash;5220</span> |
-        <i class="fa fa-at"></i> <span id="email">richmondnicolette13@protonmail.com</span> | <i class="fa-solid fa-location-dot"></i> <span class="location">Miami, FL</span></p>
+ <!-- SLIDESHOW -->
+  <div class="slides-container">
+    <div id="slider">
+            <div class="text-col">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="text-col">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="text-col">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+    </div>
+  </div>
 
+  </script>
 <!-- TIPPY TOOLTIPS -->
  <!-- Development -->
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
@@ -77,5 +111,10 @@
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
 
+<!-- sitewide external js file -->
+<script src="sitewide.js"></script>
+
+<!-- boostrap -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
